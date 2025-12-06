@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-device-width, initial-scale=1.0">
+    <title>SKR Trader Analytics - TradingView Charts & Bias Tracker</title>
+    <meta name="description" content="Free TradingView analytics with bias tracker for BTC, Forex, Gold. Live charts with 80+ drawing tools.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="skr-header">
+        <div class="header-content">
+            <div class="branding">
+                <h1 class="logo">SKR<span>Trader</span></h1>
+                <p class="tagline">📊 Live Analytics & Bias Tracker</p>
+            </div>
+            <nav class="navbar">
+                <button class="nav-btn active" data-tab="bias">📊 Bias</button>
+                <button class="nav-btn" data-tab="chart">📈 Charts</button>
+                <button class="nav-btn" data-tab="news">📰 News</button>
+                <button class="nav-btn" data-tab="calendar">📅 Calendar</button>
+                <button class="nav-btn" data-tab="plans">💎 Plans</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="bias" class="tab-content active">
+            <div class="section-title">🎯 Select Trading Pair / ट्रेडिंग पेयर चुनें</div>
+            <div class="assets-grid" id="asset-grid"></div>
+            <div class="bias-tracker-section">
+                <h3>📌 Bias Tracker</h3>
+                <div class="bias-grid" id="bias-grid"></div>
+            </div>
+        </section>
+
+        <section id="chart" class="tab-content">
+            <div class="chart-section">
+                <div class="chart-header">
+                    <h2 id="chart-title">BTC/USD - Live Chart</h2>
+                    <div class="timeframe-buttons">
+                        <button class="tf-btn active" data-tf="5">5M</button>
+                        <button class="tf-btn" data-tf="15">15M</button>
+                        <button class="tf-btn" data-tf="60">1H</button>
+                        <button class="tf-btn" data-tf="240">4H</button>
+                        <button class="tf-btn" data-tf="1440">1D</button>
+                        <button class="tf-btn" data-tf="10080">1W</button>
+                    </div>
+                </div>
+                <div id="tv_chart" class="chart-container"></div>
+            </div>
+        </section>
+
+        <section id="news" class="tab-content">
+            <div class="section-title">📰 आज की मार्केट न्यूज़ | Today's News</div>
+            <div class="news-grid" id="news-grid"></div>
+        </section>
+
+        <section id="calendar" class="tab-content">
+            <div class="section-title">📅 Economic Calendar</div>
+            <div class="calendar-section" id="calendar-section">
+                <h3>🔴 Today's High Impact Events</h3>
+                <div class="event-list">
+                    <div class="event">
+                        <span class="event-time">14:30 UTC</span>
+                        <span class="event-name">US Initial Jobless Claims</span>
+                        <span class="event-impact">CRITICAL</span>
+                    </div>
+                    <div class="event">
+                        <span class="event-time">15:45 UTC</span>
+                        <span class="event-name">US Manufacturing PMI</span>
+                        <span class="event-impact">CRITICAL</span>
+                    </div>
+                    <div class="event">
+                        <span class="event-time">16:00 UTC</span>
+                        <span class="event-name">Fed Chair Powell Speaks</span>
+                        <span class="event-impact">MAJOR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="tab-content">
+            <div class="section-title">💎 Subscription Plans</div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>FREE</h3>
+                    <p class="price">₹0<small>/month</small></p>
+                    <ul class="features">
+                        <li>✅ Bias Tracker (Basic)</li>
+                        <li>✅ Live Charts</li>
+                        <li>✅ 5 Asset Pairs</li>
+                        <li>❌ Advanced Indicators</li>
+                    </ul>
+                    <button class="btn-free">Start Free</button>
+                </div>
+                <div class="plan-card featured">
+                    <h3>PRO</h3>
+                    <p class="price">₹299<small>/month</small></p>
+                    <ul class="features">
+                        <li>✅ Everything in Free</li>
+                        <li>✅ 15 Asset Pairs</li>
+                        <li>✅ Historical Charts</li>
+                        <li>✅ 100+ Indicators</li>
+                    </ul>
+                    <button class="btn-pro">Subscribe Pro</button>
+                </div>
+                <div class="plan-card">
+                    <h3>ELITE</h3>
+                    <p class="price">₹799<small>/month</small></p>
+                    <ul class="features">
+                        <li>✅ Everything in Pro</li>
+                        <li>✅ Unlimited Assets</li>
+                        <li>✅ Custom Alerts</li>
+                        <li>✅ 24/7 Support</li>
+                    </ul>
+                    <button class="btn-elite">Subscribe Elite</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="skr-footer">
+        <p>&copy; 2025 SKR Trader Analytics | TradingView Charts Powered | Free Analytics Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
